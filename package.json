@@ -16,12 +16,12 @@
     "release:patch": "standard-version --release-as patch"
   },
   "dependencies": {
-    "@types/node": "^18.7.18",
-    "typescript": "^4.8.3"
+    "@types/node": "^18.15.5",
+    "typescript": "^5.0.2"
   },
   "devDependencies": {
     "git-cz": "^4.9.0",
-    "rollup": "^2.79.0"
+    "rollup": "^3.20.0"
   },
   "author": "",
   "license": "ISC"
