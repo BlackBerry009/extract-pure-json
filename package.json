@@ -26,7 +26,7 @@
   "scripts": {
     "prepublish": "npm run test && npm run build",
     "build": "tsc",
-    "test": "ava",
+    "test": "c8 ava",
     "prepublishOnly": "npm run build",
     "commit": "git-cz",
     "release:major": "standard-version --release-as major",
@@ -47,9 +47,6 @@
     "reporter": [
       "text",
       "lcov"
-    ],
-    "exclude": [
-      "source/vendor"
     ]
   },
   "ava": {
