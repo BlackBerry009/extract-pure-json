@@ -25,6 +25,12 @@ test('extractPureJson with retry false', (t) => {
   t.deepEqual(result, { name: 'test' });
 });
 
+test('extractPureJson with random string', t => {
+  const text = '{"a": 1]*&^)}}}}}}';
+  const result = extractPureJson(text, { retry: 5 });
+  t.deepEqual(result, false);
+})
+
 test('extractPureJson with array', (t) => {
   const text = '[{"a":1},{"b":2}]';
   const result = extractPureJson(text);
