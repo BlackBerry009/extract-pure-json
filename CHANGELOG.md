@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/BlackBerry009/extract-pure-json/compare/v0.0.3...v0.0.5) (2023-03-22)
+
+
+### Bug Fixes
+
+* more case ([453d967](https://github.com/BlackBerry009/extract-pure-json/commit/453d967b63eb512f4b1dca4e98a4726fe138f299))
+
 ### [0.0.3](https://github.com/BlackBerry009/extract-pure-json/compare/v0.0.2...v0.0.3) (2023-03-22)
 
 
