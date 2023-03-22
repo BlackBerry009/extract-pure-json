@@ -24,8 +24,9 @@
   "homepage": "https://github.com/BlackBerry009/extract-pure-json.git",
   "bugs": "https://github.com/BlackBerry009/extract-pure-json/issues",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "npm run test && npm run build",
     "build": "tsc",
+    "test": "ava",
     "prepublishOnly": "npm run build",
     "commit": "git-cz",
     "release:major": "standard-version --release-as major",
@@ -37,7 +38,31 @@
     "typescript": "^5.0.2"
   },
   "devDependencies": {
-    "git-cz": "^4.9.0"
+    "ava": "^5.2.0",
+    "c8": "^7.13.0",
+    "git-cz": "^4.9.0",
+    "ts-node": "^10.9.1"
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "exclude": [
+      "source/vendor"
+    ]
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=ts-node/esm",
+      "--experimental-specifier-resolution=node"
+    ],
+    "files": [
+      "test/**/*.ts"
+    ]
   },
   "author": "BlackBerry",
   "license": "ISC"
